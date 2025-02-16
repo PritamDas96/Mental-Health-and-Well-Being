@@ -103,15 +103,15 @@ def get_youtube_link(age_group, concern):
 # Streamlit UI Setup
 st.set_page_config(page_title="Mental Health & Self-Improvement", layout="wide")
 st.markdown("<h1 class='main-title'>🌿 Mental Health & Self-Improvement App</h1>", unsafe_allow_html=True)
-st.sidebar.image("https://img.freepik.com/free-vector/mental-health-logo_23-2148476181.jpg", width=100)
-st.sidebar.header("🧘‍♂️ USER INPUT")
+st.image("https://img.freepik.com/free-vector/mental-health-logo_23-2148476181.jpg", width=100)
+st.header("🧘‍♂️ USER INPUT")
 
 # User Inputs
-age_group = st.sidebar.selectbox("Select Your Age Group:",
+age_group = st.selectbox("Select Your Age Group:",
                                  ["Child", "Teenager", "Young Adult", "Middle-aged", "Senior"])
-concern = st.sidebar.text_area("Describe Your Concern or Challenge:")
+concern = st.text_area("Describe Your Concern or Challenge:")
 
-if st.sidebar.button("Get Advice"):
+if st.button("Get Advice"):
     if concern:
         st.subheader("📜 Personalized Advice:")
         st.write(get_advice(age_group, concern))
