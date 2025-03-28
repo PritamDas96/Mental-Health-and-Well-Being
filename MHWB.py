@@ -3,7 +3,7 @@ import google.generativeai as genai
 import random
 
 # Set up Gemini API Key securely
-API_KEY = "AIzaSyBtQxK4iHj1DgscIz0x7JGNhH-N5YAPiP4"
+API_KEY =st.secrets["GOOGLE_API_KEY"] 
 genai.configure(api_key=API_KEY)
 
 # Spiritual paragraphs
