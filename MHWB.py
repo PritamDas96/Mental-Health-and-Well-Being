@@ -32,7 +32,7 @@ motivational_quotes = [
 
 # Function to fetch AI-generated advice
 def get_advice(age_group, concern):
-    model = genai.GenerativeModel("gemini-1.5-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash")
 
     prompt = f"""
     Provide holistic mental well-being advice for a {age_group} individual facing '{concern}'.
